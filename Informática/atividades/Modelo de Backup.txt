@@ -1,0 +1,61 @@
+contruir um modelo de backup (copia e mover)
+utilizando 3 diretórios (a sua escolha) e 1
+obrigatório (/home) para 8 usuários criado.
+Incluir pasta e subpastas
+
+
+1: Criação de usuários e grupos
+
+# usuários
+useradd Diego
+useradd Douglas
+useradd Daniel
+useradd Dennis
+useradd Danilo
+useradd Davi
+useradd Duda
+useradd Donald
+
+# grupos
+groupadd grupo1
+groupadd grupo2
+groupadd grupo3
+groupadd grupo4
+
+# Adicionar usuários aos grupos
+usermod -aG grupo1 Diego
+usermod -aG grupo1 Douglas
+usermod -aG grupo2 Daniel
+usermod -aG grupo2 Dennis
+usermod -aG grupo3 Danilo
+usermod -aG grupo3 Davi
+usermod -aG grupo4 Duda
+usermod -aG grupo4 Donald
+
+
+2: criação de modelos backup no home/
+
+mkdir -p /home/backup/pessoa
+cp -r /home/Diego /home/backup/pessoa/
+cp -r /home/Douglas /home/backup/pessoa/
+
+
+3: criação de modelos backup no var/
+
+mkdir -p /var/backup/pessoa
+cp -r /home/Daniel /var/backup/pessoa/
+cp -r /home/Dennis /var/backup/pessoa/
+
+
+4: criação de modelos backup no usr/
+
+mkdir -p /usr/backup/pessoa
+cp -r /home/Danilo /usr/backup/pessoa/
+cp -r /home/Davi /usr/backup/pessoa/
+
+
+5: criação de modelos backup no opt/
+
+mkdir -p /opt/backup/pessoa
+cp -r /home/Duda /opt/backup/pessoa/
+cp -r /home/Donald /opt/backup/pessoa/

@@ -1,0 +1,3 @@
+Nas aulas de Programação web, aprendemos sobre a estrutura de um site, como cria-las com HTML, 
+estilizar com CSS, e animar com um pouco de javascript.
+

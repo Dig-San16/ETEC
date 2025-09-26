@@ -1,0 +1,4 @@
+Nas aulas de Informática, entendemos sobre o sistema operacional Linux, as diferenças entre
+ele e o windows, empresas que trabalham através dele e os diferentes softwares criados a partir dele
+
+Vimos também um pouco sobre alguns comandos linux e qual a função de cada um na linha do prompt

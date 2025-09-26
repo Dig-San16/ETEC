@@ -1,0 +1,6 @@
+Nas aulas de Programação e algoritmos, aprendemos sobre a lógica de programação em seu sentido mais 
+amplo, o que são variáveis, condições, repetições e funções. 
+
+entendemos como o computador processa dados, le programas e os executa
+
+usamos o básico da Linguagem C e mexemos um pouco de GIT.
