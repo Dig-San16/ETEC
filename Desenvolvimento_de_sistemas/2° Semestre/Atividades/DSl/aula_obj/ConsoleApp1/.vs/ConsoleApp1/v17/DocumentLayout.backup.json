@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pamel\\Downloads\\2SEMESTRE\\DSl\\aula_obj\\ConsoleApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9B32DF3A-4728-4545-BA4B-6FC54E528448}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\pamel\\downloads\\2semestre\\dsl\\aula_obj\\consoleapp1\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B32DF3A-4728-4545-BA4B-6FC54E528448}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B32DF3A-4728-4545-BA4B-6FC54E528448}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\pamel\\downloads\\2semestre\\dsl\\aula_obj\\consoleapp1\\consoleapp1\\presidente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B32DF3A-4728-4545-BA4B-6FC54E528448}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\presidente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B32DF3A-4728-4545-BA4B-6FC54E528448}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\pamel\\downloads\\2semestre\\dsl\\aula_obj\\consoleapp1\\consoleapp1\\gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B32DF3A-4728-4545-BA4B-6FC54E528448}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B32DF3A-4728-4545-BA4B-6FC54E528448}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\pamel\\downloads\\2semestre\\dsl\\aula_obj\\consoleapp1\\consoleapp1\\supervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B32DF3A-4728-4545-BA4B-6FC54E528448}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\supervisor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B32DF3A-4728-4545-BA4B-6FC54E528448}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\pamel\\downloads\\2semestre\\dsl\\aula_obj\\consoleapp1\\consoleapp1\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B32DF3A-4728-4545-BA4B-6FC54E528448}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\funcionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B32DF3A-4728-4545-BA4B-6FC54E528448}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\pamel\\downloads\\2semestre\\dsl\\aula_obj\\consoleapp1\\consoleapp1\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B32DF3A-4728-4545-BA4B-6FC54E528448}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B32DF3A-4728-4545-BA4B-6FC54E528448}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\pamel\\downloads\\2semestre\\dsl\\aula_obj\\consoleapp1\\consoleapp1\\pessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B32DF3A-4728-4545-BA4B-6FC54E528448}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\pessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pamel\\Downloads\\2SEMESTRE\\DSl\\aula_obj\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\pamel\\Downloads\\2SEMESTRE\\DSl\\aula_obj\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "RelativeToolTip": "ConsoleApp1\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T12:46:18.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Pessoa.cs",
+              "DocumentMoniker": "C:\\Users\\pamel\\Downloads\\2SEMESTRE\\DSl\\aula_obj\\ConsoleApp1\\ConsoleApp1\\Pessoa.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Pessoa.cs",
+              "ToolTip": "C:\\Users\\pamel\\Downloads\\2SEMESTRE\\DSl\\aula_obj\\ConsoleApp1\\ConsoleApp1\\Pessoa.cs",
+              "RelativeToolTip": "ConsoleApp1\\Pessoa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T13:28:46.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\pamel\\Downloads\\2SEMESTRE\\DSl\\aula_obj\\ConsoleApp1\\ConsoleApp1\\Cliente.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Cliente.cs",
+              "ToolTip": "C:\\Users\\pamel\\Downloads\\2SEMESTRE\\DSl\\aula_obj\\ConsoleApp1\\ConsoleApp1\\Cliente.cs",
+              "RelativeToolTip": "ConsoleApp1\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T13:29:06.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Funcionario.cs",
+              "DocumentMoniker": "C:\\Users\\pamel\\Downloads\\2SEMESTRE\\DSl\\aula_obj\\ConsoleApp1\\ConsoleApp1\\Funcionario.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Funcionario.cs",
+              "ToolTip": "C:\\Users\\pamel\\Downloads\\2SEMESTRE\\DSl\\aula_obj\\ConsoleApp1\\ConsoleApp1\\Funcionario.cs",
+              "RelativeToolTip": "ConsoleApp1\\Funcionario.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T14:14:36.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Supervisor.cs",
+              "DocumentMoniker": "C:\\Users\\pamel\\Downloads\\2SEMESTRE\\DSl\\aula_obj\\ConsoleApp1\\ConsoleApp1\\Supervisor.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Supervisor.cs",
+              "ToolTip": "C:\\Users\\pamel\\Downloads\\2SEMESTRE\\DSl\\aula_obj\\ConsoleApp1\\ConsoleApp1\\Supervisor.cs",
+              "RelativeToolTip": "ConsoleApp1\\Supervisor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T14:16:50.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Gerente.cs",
+              "DocumentMoniker": "C:\\Users\\pamel\\Downloads\\2SEMESTRE\\DSl\\aula_obj\\ConsoleApp1\\ConsoleApp1\\Gerente.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Gerente.cs",
+              "ToolTip": "C:\\Users\\pamel\\Downloads\\2SEMESTRE\\DSl\\aula_obj\\ConsoleApp1\\ConsoleApp1\\Gerente.cs",
+              "RelativeToolTip": "ConsoleApp1\\Gerente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T14:17:02.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Presidente.cs",
+              "DocumentMoniker": "C:\\Users\\pamel\\Downloads\\2SEMESTRE\\DSl\\aula_obj\\ConsoleApp1\\ConsoleApp1\\Presidente.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Presidente.cs",
+              "ToolTip": "C:\\Users\\pamel\\Downloads\\2SEMESTRE\\DSl\\aula_obj\\ConsoleApp1\\ConsoleApp1\\Presidente.cs",
+              "RelativeToolTip": "ConsoleApp1\\Presidente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T14:17:19.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
