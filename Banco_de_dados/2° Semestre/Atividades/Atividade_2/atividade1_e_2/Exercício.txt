@@ -1,0 +1,39 @@
+1 Liste as colunas CDIMOVEL, CDVENDEDOR, VLPRECO e SGESTADO dos imóveis cujo preço de
+venda seja inferior a 150 mil e o vendedor não seja 2.
+
+
+2 Liste as colunas CDCOMPRDOR, NMCOMPRADOR, NMENDERECO e SGESTADO da tabela 
+comprador em que o Estado seja Nulo.
+
+
+3 Liste as colunas CDCOMPRDOR, NMCOMPRADOR, NMENDERECO e SGESTADO da tabela 
+comprador em que o Estado não seja Nulo.
+
+
+4 Liste todas as ofertas cujo valor esteja entre 100 mil e 150mil.
+
+
+5 Liste todas as ofertas cuja data da oferta esteja entre 01/02/02 e 01/03/02;
+
+
+6 Liste todos os vendedores que comecem com a letra M.
+
+
+7 Liste todos os vendedores que tenham a Letra A na segunda posição do nome.
+
+
+8 Liste todos os compradores que tenham a Letra "U" em qualquer posição do endereço;
+
+
+9 Liste todas as ofertas cujo imóvel seja 1 ou 2;
+
+
+10 Liste todos os imóveis cujo código 2 ou 3 em ordem alfabética de endereço;
+
+
+11 Liste todas as ofertas cujo imóvel seja 2 ou 3 e o valor da oferta seja 
+maior que 140 mil, em ordem decrescente da data.
+
+
+12 Liste todos os imóveis cujo preço de venda esteja entre 
+110mil e 200mil, ou seja, do vendedor 1 em ordem de área útil.
