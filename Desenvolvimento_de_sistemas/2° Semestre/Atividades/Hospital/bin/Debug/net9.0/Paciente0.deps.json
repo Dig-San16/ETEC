@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "Paciente/1.0.0": {
+      "Paciente0/1.0.0": {
         "runtime": {
-          "Paciente.dll": {}
+          "Paciente0.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Paciente/1.0.0": {
+    "Paciente0/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
