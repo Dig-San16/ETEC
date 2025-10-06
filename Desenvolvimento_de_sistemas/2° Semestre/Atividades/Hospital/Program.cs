@@ -1,4 +1,11 @@
-﻿namespace Hospital
+﻿﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Hospital
 {
     class Paciente
     {
@@ -14,6 +21,11 @@
             {
                 try
                 {
+                    if (pacientes.Count >= 15)
+                    {
+                        Console.WriteLine("Não é possível cadastrar mais pacientes. Limite de 15 atingido.\n");
+                        return;
+                    }
                     Console.Clear();
                     Console.Write("Digite seu nome: ");
                     nome = Console.ReadLine();
@@ -62,11 +74,7 @@
         {
 
             Console.Clear();
-            if (pacientes.Count >= 15)
-            {
-                Console.WriteLine("Não é possível cadastrar pacientes agora, espere até o atendimento ser concluído\n");
-            }
-            else if (pacientes.Count == 0)
+            if (pacientes.Count == 0)
             {
                 Console.WriteLine("Não há pacientes para atender.\n");
             }
@@ -83,7 +91,11 @@
 
                 if (atender.preferencial == "S")
                 {
-                    Console.WriteLine($"Paciente preferencial {atender.nome} atendido!\n");
+                    Console.WriteLine($"Paciente preferencial {atender.nome} atendido com prioridade!\n");
+                }
+                else if (atender.idade >= 60)
+                {
+                    Console.WriteLine($"Paciente idodo {atender.nome} atendido com prioridade!\n");
                 }
                 else
                 {
@@ -98,16 +110,95 @@
 
             string buscarCpf = Console.ReadLine();
             Paciente paciente = pacientes.Find(p => p.cpf == buscarCpf);
+
             if (paciente != null)
             {
-                Console.WriteLine("\n--- ALTERAÇÃO DE DADOS PARA {0} ---", paciente.nome);
-                Console.Write($"CPF atual: {paciente.cpf}. Novo CPF (digite para alterar): ");
-                string novocpf = Console.ReadLine();
-                if (!string.IsNullOrEmpty(novocpf))
+                int escolha;
+
+                do
                 {
-                    paciente.cpf = novocpf;
-                    Console.WriteLine("CPF atualizado com sucesso!\n");
-                }
+                    Console.WriteLine("\nALTERAÇÃO DE DADOS PARA {0}", paciente.nome);
+                    Console.WriteLine("Digite o que pretende alterar:");
+                    Console.WriteLine("1: Nome");
+                    Console.WriteLine("2: Idade");
+                    Console.WriteLine("3: CPF");
+                    Console.WriteLine("4: Preferencial");
+                    Console.WriteLine("0: Finalizar");
+                    Console.Write("Escolha: ");
+
+                    if (!int.TryParse(Console.ReadLine(), out escolha))
+                    {
+                        Console.WriteLine("Opção inválida! Digite um número.");
+                        continue;
+                    }
+
+                    switch (escolha)
+                    {
+                        case 1:
+                            Console.Write($"Nome atual: {paciente.nome}. Novo nome: ");
+                            string novoNome = Console.ReadLine();
+                            if (!string.IsNullOrEmpty(novoNome))
+                            {
+                                paciente.nome = novoNome;
+                                Console.WriteLine("Nome alterado com sucesso!");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Nome não alterado.");
+                            }
+                            break;
+
+                        case 2:
+                            Console.Write($"Idade atual: {paciente.idade}. Nova idade: ");
+                            string idadeStr = Console.ReadLine();
+                            if (int.TryParse(idadeStr, out int novaIdade))
+                            {
+                                paciente.idade = novaIdade;
+                                Console.WriteLine("Idade alterada com sucesso!");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Idade inválida! Não alterada.");
+                            }
+                            break;
+
+                        case 3:
+                            Console.Write($"CPF atual: {paciente.cpf}. Novo CPF: ");
+                            string novoCpf = Console.ReadLine();
+                            if (!string.IsNullOrEmpty(novoCpf))
+                            {
+                                paciente.cpf = novoCpf;
+                                Console.WriteLine("CPF alterado com sucesso!");
+                            }
+                            else
+                            {
+                                Console.WriteLine("CPF não alterado.");
+                            }
+                            break;
+
+                        case 4:
+                            Console.Write($"Preferencial atual: {paciente.preferencial}. É preferencial? (S/N): ");
+                            string novoPreferencial = Console.ReadLine().Trim().ToUpper();
+                            if (novoPreferencial == "S" || novoPreferencial == "N")
+                            {
+                                paciente.preferencial = novoPreferencial;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Opção inválida! Use S ou N");
+                            }
+                            break;
+
+                        case 0:
+                            Console.Clear();
+                            break;
+
+                        default:
+                            Console.WriteLine("Opção inválida! Escolha entre 0-4");
+                            break;
+                    }
+
+                } while (escolha != 0);
             }
             else
             {
@@ -145,21 +236,12 @@
                         pessoa.Mudar();
                         break;
                     case "Q":
-                        Console.WriteLine("Bom trabalho, agora");
+                        Console.WriteLine("Bom trabalho, agora descanse");
                         return;
                     default:
                         Console.WriteLine("Opção inválida, tente novamente.\n");
                         break;
                 }
-            }
-        }
-
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                Paciente menu = new Paciente();
-                menu.Lobby();
             }
         }
 
