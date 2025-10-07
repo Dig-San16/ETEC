@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hospital
 {
-    internal class Program
+    internal class Program : Paciente
     {
         static void Main(string[] args)
         {
