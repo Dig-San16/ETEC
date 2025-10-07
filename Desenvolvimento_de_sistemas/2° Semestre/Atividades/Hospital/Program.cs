@@ -14,6 +14,9 @@ namespace Hospital
         public int idade;
         public string cpf;
         public string preferencial;
+
+        // static significa que algo é compartilhado por todas as instâncias da classe (ou seja, pode ser acessada por qualquer
+        // método ou classe)
         public static List<Paciente> pacientes = new List<Paciente>();
 
         //Método de cadastrar
@@ -101,7 +104,7 @@ namespace Hospital
             {
                 // cria -se um objeto que fará referência aos pacientes com propriedade preferencial
                 // (pacientes preferenciais foram aqueles que responderam "S" de sim na ultima pergunta do cadastro)
-                Paciente atender = pacientes.Find(p => p.preferencial == "S");
+                Paciente atender = pacientes.Find(paciente => paciente.preferencial == "S");
 
                 // condição caso não houver paciente com atendimento preferencial
                 if (atender == null)
@@ -144,9 +147,7 @@ namespace Hospital
             // essa condição identifica se o cpf
             if (paciente != null)
             {
-
                 int escolha;
-
                 // aqui, a condição irá repetir até que o usuário escreva 0 para sair
                 do
                 {
@@ -177,12 +178,13 @@ namespace Hospital
                             Console.Write($"Nome atual: {paciente.nome}. Novo nome: ");
                             string novoNome = Console.ReadLine();
 
-                            
+                            //A condição será true somente se "novoNome" tiver algum valor (não for nulo nem vazio).
                             if (!string.IsNullOrEmpty(novoNome))
                             {
                                 paciente.nome = novoNome;
                                 Console.WriteLine("Nome alterado com sucesso!");
                             }
+                            // se o valor for nulo e vazio, retornará como inválido
                             else
                             {
                                 Console.WriteLine("Nome não alterado.");
@@ -269,6 +271,7 @@ namespace Hospital
                 Console.Write("Opção: ");
 
                 string resposta = Console.ReadLine().Trim().ToUpper();
+                
                 Paciente pessoa = new Paciente();
 
                 // aqui digita-se as opções com base em sua letra especifica
