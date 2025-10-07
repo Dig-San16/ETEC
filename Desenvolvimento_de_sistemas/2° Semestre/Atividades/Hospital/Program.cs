@@ -161,6 +161,8 @@ namespace Hospital
                     Console.Write("Escolha: ");
 
                     // condição caso o opção não seja um número
+                    // ela tenta converter a opção digitada para inteiro, se a opção não for inteira, retorna 
+                    // a opção como inválida
                     if (!int.TryParse(Console.ReadLine(), out escolha))
                     {
                         Console.WriteLine("Opção inválida! Digite um número.");
@@ -174,6 +176,8 @@ namespace Hospital
                         case 1:
                             Console.Write($"Nome atual: {paciente.nome}. Novo nome: ");
                             string novoNome = Console.ReadLine();
+
+                            
                             if (!string.IsNullOrEmpty(novoNome))
                             {
                                 paciente.nome = novoNome;
