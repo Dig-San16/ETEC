@@ -150,6 +150,7 @@ namespace Hospital
                 // aqui, a condição irá repetir até que o usuário escreva 0 para sair
                 do
                 {
+                    // título, opçôes, e a escolha
                     Console.WriteLine("\nALTERAÇÃO DE DADOS PARA {0}", paciente.nome);
                     Console.WriteLine("Digite o que pretende alterar:");
                     Console.WriteLine("1: Nome");
@@ -159,14 +160,17 @@ namespace Hospital
                     Console.WriteLine("0: Finalizar");
                     Console.Write("Escolha: ");
 
+                    // condição caso o opção não seja um número
                     if (!int.TryParse(Console.ReadLine(), out escolha))
                     {
                         Console.WriteLine("Opção inválida! Digite um número.");
                         continue;
                     }
 
+                    // condição que identifica a opção e executa o código 
                     switch (escolha)
                     {
+                        // caso for alterar o nome 
                         case 1:
                             Console.Write($"Nome atual: {paciente.nome}. Novo nome: ");
                             string novoNome = Console.ReadLine();
@@ -180,7 +184,8 @@ namespace Hospital
                                 Console.WriteLine("Nome não alterado.");
                             }
                             break;
-
+                            
+                        // caso for alterar a idade    
                         case 2:
                             Console.Write($"Idade atual: {paciente.idade}. Nova idade: ");
                             string idadeStr = Console.ReadLine();
@@ -194,7 +199,8 @@ namespace Hospital
                                 Console.WriteLine("Idade inválida! Não alterada.");
                             }
                             break;
-
+                            
+                        // caso for alterar o cpf
                         case 3:
                             Console.Write($"CPF atual: {paciente.cpf}. Novo CPF: ");
                             string novoCpf = Console.ReadLine();
@@ -209,6 +215,7 @@ namespace Hospital
                             }
                             break;
 
+                        // caso for alterar a preferencial
                         case 4:
                             Console.Write($"Preferencial atual: {paciente.preferencial}. É preferencial? (S/N): ");
                             string novoPreferencial = Console.ReadLine().Trim().ToUpper();
@@ -222,10 +229,12 @@ namespace Hospital
                             }
                             break;
 
+                        // caso for sair
                         case 0:
                             Console.Clear();
                             break;
 
+                        // se não digitar os números de 0 a 4. 
                         default:
                             Console.WriteLine("Opção inválida! Escolha entre 0-4");
                             break;
@@ -242,7 +251,7 @@ namespace Hospital
         }
 
 
-        
+        // Método do menu
         public void Lobby()
         {
             while (true)
@@ -258,6 +267,7 @@ namespace Hospital
                 string resposta = Console.ReadLine().Trim().ToUpper();
                 Paciente pessoa = new Paciente();
 
+                // aqui digita-se as opções com base em sua letra especifica
                 switch (resposta)
                 {
                     case "C":
