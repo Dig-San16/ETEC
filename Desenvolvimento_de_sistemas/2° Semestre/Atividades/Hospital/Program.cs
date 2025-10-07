@@ -144,7 +144,7 @@ namespace Hospital
             //esse objeto faz referencia ao cpf digitado pelo usuário
             Paciente paciente = pacientes.Find(p => p.cpf == buscarCpf);
 
-            // essa condição identifica se o cpf
+            // essa condição identifica se o cpf foi digitado
             if (paciente != null)
             {
                 int escolha;
@@ -298,6 +298,5 @@ namespace Hospital
                 }
             }
         }
-
     }
 }
