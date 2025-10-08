@@ -1,7 +1,7 @@
 No primeiro semestre de banco de dados, aprendemos sobre como funciona um banco de dados, seus tipos e
 os principais componentes que são aplicados. 
 
-Vimos também o que é são entidades, atributos, as chaves e os diferentes 
+Vimos também o que são entidades, atributos, as chaves e os diferentes 
 tipos de relacionamentos (cardinalidade mínimas e máximas)
 
 Aprendemos sobre anomalias de atualização, que são os diferentes erros que podem ocorrer na criação
