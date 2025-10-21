@@ -1,8 +1,0 @@
-C:\Users\lab1054\Desktop\consolinho\consolinho\bin\Debug\consolinho.exe.config
-C:\Users\lab1054\Desktop\consolinho\consolinho\bin\Debug\consolinho.exe
-C:\Users\lab1054\Desktop\consolinho\consolinho\bin\Debug\consolinho.pdb
-C:\Users\lab1054\Desktop\consolinho\consolinho\obj\Debug\consolinho.csproj.AssemblyReference.cache
-C:\Users\lab1054\Desktop\consolinho\consolinho\obj\Debug\consolinho.csproj.CoreCompileInputs.cache
-C:\Users\lab1054\Desktop\consolinho\consolinho\obj\Debug\consolinho.exe
-C:\Users\lab1054\Desktop\consolinho\consolinho\obj\Debug\consolinho.pdb
-C:\Users\lab1054\Desktop\consolinho\consolinho\obj\Debug\consolinho.exe.config

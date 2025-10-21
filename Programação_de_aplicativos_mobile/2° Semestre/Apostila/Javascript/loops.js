@@ -20,12 +20,9 @@ do {
     count++
 } while (count <= 3);
 
-// Reinicio o contador
-count = 0;
-
 /**
- * Diferente do DO WHILE, o WHILE primeiro verifica a condição para então dar seguimento 
- * nas repetições. Tanto WHILE quanto do While, a incrementação do contador costuma ficar por último.
+ * O WHILE primeiro verifica a condição para então dar seguimento nas repetições, Diferente do DO WHILE.
+ * Tanto WHILE quanto DO WHILE, a incrementação do contador costuma ficar por último.
  */
 console.log('\n -------------- WHILE --------------');
 while (count <= 3) {

@@ -1,9 +1,0 @@
-arquivos em PHP só são executáveis no xampp, portanto, coloque o arquivo php 
-nesse caminho para toda vez que desejar
-executá-los:
-
-xampp/htdocs/seu_arquivo
-
-quando for executar o arquivo em navegadores como google, escreva na barra de pesquisa:
-
-http://localhost:8080/Caminho_do_arquivo_php

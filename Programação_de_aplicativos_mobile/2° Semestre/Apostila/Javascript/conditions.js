@@ -8,9 +8,9 @@
  * executarão determinado bloco de código.
  */ 
 
-console.log('\n -------------------IF ELSE-------------------');
+console.log('\n -------------------IF, ELSE IF, ELSE-------------------');
 
-const idade = 22;
+let idade = 22;
 if (idade < 18) {
     console.log('Você ainda não pode tirar CNH');
 } else if (idade >= 18 || idade <= 25) {
@@ -20,7 +20,7 @@ if (idade < 18) {
 }
 
 
-console.log('\n -------------------SWITCH CASE DEFAULT-------------------');
+console.log('\n -------------------SWITCH, CASE, DEFAULT-------------------');
 
 let fruta = 'Maçãs';
 switch (fruta) {

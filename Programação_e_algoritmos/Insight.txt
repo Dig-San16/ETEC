@@ -3,4 +3,4 @@ amplo, o que são variáveis, condições, repetições e funções.
 
 entendemos como o computador processa dados, le programas e os executa
 
-usamos o básico da Linguagem C e mexemos um pouco de GIT.
+usamos o básico da Linguagem C e mexemos com GIT e Github.

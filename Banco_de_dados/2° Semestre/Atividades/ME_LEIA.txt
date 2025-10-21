@@ -1,4 +1,5 @@
 Arquivos em sql são executáveis em diversos SGBDs (Sistemas Gerenciadores de Banco de Dados), 
-recomendo baixar postgresql, MySQL ou simplesmente um compilador para testar os bancos de dados feitos.
+recomendo baixar postgresql, MySQL ou simplesmente testar os bancos de dados feitos em um 
+compilador online.
 
-obs: utilize "SELECT * FROM nome_tabela" para exibir todos os registros da tabela.
+obs: utilize "SELECT * FROM nome_tabela" para exibir todos os registros de uma tabela.

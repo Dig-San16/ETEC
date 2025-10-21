@@ -16,10 +16,24 @@
  * - const, cria variáveis de escopo fechado e que não podem ser sobrescritas
  * após receberem um valor inicial.
  */ 
-var nome = "William";
 
-let sobrenome = "Sobral";
+// tipos de declarações
+var variável = 100;
+let letar = 200;
+const pi = 3.14;
 
-const idade = 25;
+// tipos de dados
+let nome = "William"; //string
 
-console.log(nome, sobrenome, idade);
+let idade = 25; //number
+
+let num = 25.1; //float
+
+let Evdd = false; //boolean
+
+let objeto = {} //object
+
+let lista = [] //array
+
+console.log(nome, idade, num, Evdd, objeto, lista);
+

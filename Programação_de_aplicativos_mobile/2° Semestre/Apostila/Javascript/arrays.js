@@ -15,21 +15,28 @@
  * representar estruturas de dados mais complexas.
  */ 
 
-console.log('\n -------------- ARRAYS --------------');
+console.log('\n -------------- Arrays | Vetores | Listas  --------------');
 
-let lista = [];
-for (let count = 0; count < 10; count++) {
-    lista[count] = (count + 1) * 1;
-    console.log("1 x " + (count + 1) + " = " + lista[count]);
-}
+let array = [1, 2, 3, 4, 5,];
 
-console.log('\n -------------- MATRIZES --------------');
+console.log(array[0]); //Acessando uma posição diretamente
+console.log(array[10 - 8]); //Acessando uma posição por uma conta
 
-let matriz = [];
-for (let linha = 0; linha < 10; linha++) {
-    matriz[linha] = new Array(10);
-    for (let coluna = 0; coluna < 10; coluna++) {
-        matriz[linha][coluna] = (linha + 1) + " x " + (coluna + 1)  + " = " + (linha + 1) * (coluna + 1) + " \n";
-    }
-}
-console.log(matriz);
+array[5] = 10;
+console.log(array);
+array[5] = 152.1;
+console.log(array);
+
+
+
+console.log('\n -------------- Matrizes --------------');
+
+let matriz = [
+    [1, 2, 3, 4, 5],
+    [6, 7, 8, 9, 10],
+    [11, 12, 13, 14, 15]
+];
+
+console.log(matriz[0])
+
+
