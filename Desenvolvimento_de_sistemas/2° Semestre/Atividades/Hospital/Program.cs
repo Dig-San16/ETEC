@@ -260,7 +260,6 @@ namespace Hospital
             }
         }
 
-
         // Método do menu
         public void Lobby()
         {
