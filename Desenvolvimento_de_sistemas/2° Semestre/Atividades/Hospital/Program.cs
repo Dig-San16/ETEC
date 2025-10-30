@@ -145,7 +145,7 @@ namespace Hospital
             Paciente paciente = pacientes.Find(p => p.cpf == buscarCpf);
 
             // essa condição identifica se o cpf foi digitado
-            if (paciente != null)
+            if (paciente is not null)
             {
                 int escolha;
                 // aqui, a condição irá repetir até que o usuário escreva 0 para sair
@@ -184,7 +184,7 @@ namespace Hospital
                                 paciente.nome = novoNome;
                                 Console.WriteLine("Nome alterado com sucesso!");
                             }
-                            // se o valor for nulo e vazio, retornará como inválido
+                            // se não for digitado nada, ou seja, o valor for nulo e vazio, retornará nada
                             else
                             {
                                 Console.WriteLine("Nome não alterado.");
@@ -195,6 +195,7 @@ namespace Hospital
                         case 2:
                             Console.Write($"Idade atual: {paciente.idade}. Nova idade: ");
                             string idadeStr = Console.ReadLine();
+
                             if (int.TryParse(idadeStr, out int novaIdade))
                             {
                                 paciente.idade = novaIdade;
@@ -202,7 +203,7 @@ namespace Hospital
                             }
                             else
                             {
-                                Console.WriteLine("Idade inválida! Não alterada.");
+                                Console.WriteLine("Idade Não alterada.");
                             }
                             break;
                             
@@ -210,6 +211,7 @@ namespace Hospital
                         case 3:
                             Console.Write($"CPF atual: {paciente.cpf}. Novo CPF: ");
                             string novoCpf = Console.ReadLine();
+
                             if (!string.IsNullOrEmpty(novoCpf))
                             {
                                 paciente.cpf = novoCpf;
@@ -225,13 +227,15 @@ namespace Hospital
                         case 4:
                             Console.Write($"Preferencial atual: {paciente.preferencial}. É preferencial? (S/N): ");
                             string novoPreferencial = Console.ReadLine().Trim().ToUpper();
+
                             if (novoPreferencial == "S" || novoPreferencial == "N")
                             {
                                 paciente.preferencial = novoPreferencial;
+                                Console.WriteLine("Preferencia alterada com sucesso!");
                             }
                             else
                             {
-                                Console.WriteLine("Opção inválida! Use S ou N");
+                                Console.WriteLine("Preferencial não alterado, Use S ou N");
                             }
                             break;
 

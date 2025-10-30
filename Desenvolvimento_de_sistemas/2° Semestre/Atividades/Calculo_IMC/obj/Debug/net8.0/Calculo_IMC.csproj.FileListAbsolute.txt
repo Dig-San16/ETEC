@@ -1,0 +1,15 @@
+C:\Users\rnten\ETEC\Desenvolvimento_de_sistemas\2° Semestre\Atividades\Calculo_IMC\obj\Debug\net8.0\Calculo_IMC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rnten\ETEC\Desenvolvimento_de_sistemas\2° Semestre\Atividades\Calculo_IMC\obj\Debug\net8.0\Calculo_IMC.AssemblyInfoInputs.cache
+C:\Users\rnten\ETEC\Desenvolvimento_de_sistemas\2° Semestre\Atividades\Calculo_IMC\obj\Debug\net8.0\Calculo_IMC.AssemblyInfo.cs
+C:\Users\rnten\ETEC\Desenvolvimento_de_sistemas\2° Semestre\Atividades\Calculo_IMC\obj\Debug\net8.0\Calculo_IMC.csproj.CoreCompileInputs.cache
+C:\Users\rnten\ETEC\Desenvolvimento_de_sistemas\2° Semestre\Atividades\Calculo_IMC\obj\Debug\net8.0\Calculo_IMC.sourcelink.json
+C:\Users\rnten\ETEC\Desenvolvimento_de_sistemas\2° Semestre\Atividades\Calculo_IMC\obj\Debug\net8.0\Calculo_IMC.dll
+C:\Users\rnten\ETEC\Desenvolvimento_de_sistemas\2° Semestre\Atividades\Calculo_IMC\obj\Debug\net8.0\refint\Calculo_IMC.dll
+C:\Users\rnten\ETEC\Desenvolvimento_de_sistemas\2° Semestre\Atividades\Calculo_IMC\obj\Debug\net8.0\Calculo_IMC.pdb
+C:\Users\rnten\ETEC\Desenvolvimento_de_sistemas\2° Semestre\Atividades\Calculo_IMC\bin\Debug\net8.0\Calculo_IMC.exe
+C:\Users\rnten\ETEC\Desenvolvimento_de_sistemas\2° Semestre\Atividades\Calculo_IMC\bin\Debug\net8.0\Calculo_IMC.deps.json
+C:\Users\rnten\ETEC\Desenvolvimento_de_sistemas\2° Semestre\Atividades\Calculo_IMC\bin\Debug\net8.0\Calculo_IMC.runtimeconfig.json
+C:\Users\rnten\ETEC\Desenvolvimento_de_sistemas\2° Semestre\Atividades\Calculo_IMC\bin\Debug\net8.0\Calculo_IMC.dll
+C:\Users\rnten\ETEC\Desenvolvimento_de_sistemas\2° Semestre\Atividades\Calculo_IMC\bin\Debug\net8.0\Calculo_IMC.pdb
+C:\Users\rnten\ETEC\Desenvolvimento_de_sistemas\2° Semestre\Atividades\Calculo_IMC\obj\Debug\net8.0\Calculo_IMC.genruntimeconfig.cache
+C:\Users\rnten\ETEC\Desenvolvimento_de_sistemas\2° Semestre\Atividades\Calculo_IMC\obj\Debug\net8.0\ref\Calculo_IMC.dll

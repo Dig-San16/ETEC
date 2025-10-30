@@ -1,0 +1,19 @@
+1 Faça uma busca que mostre CDIMOVEL, CDVENDEDOR, NMVENDEDOR e SGESTADO.
+
+2 Faça uma busca que mostre CDCOMPRADOR, NMCOMPRADOR, CDIMOVEL e VLORFERTA.
+
+3 Faça uma busca que mostre CDIMOVEL, VLPRECO e NMBAIRRO, cujo código do vendedor seja 3.
+
+4 Faça uma busca que mostre todos os imóveis que tenham ofertas cadastradas.
+
+5 Faça uma busca que mostre todos os imóveis e ofertas mesmo que não haja ofertas cadastradas para o imóvel.
+
+6 Faça uma busca que mostre todos os compradores e as respectivas ofertas realizadas por eles.
+
+7 Faça uma busca, porém acrescentando os compradores que ainda não fizeram ofertas para os imóveis.
+
+8 Faça uma busca que mostre todos os endereços de imóveis e os endereços dos imóveis indicados.
+
+9 Acrescente à busca anterior o nome dos vendedores tanto do imóvel quanto do imóvel indicado.
+
+10 Faça uma busca que mostre o endereço do imóvel, o bairro e o nível de preço do imóvel.

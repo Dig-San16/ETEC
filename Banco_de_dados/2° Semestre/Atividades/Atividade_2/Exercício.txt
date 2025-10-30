@@ -37,3 +37,4 @@ maior que 140 mil, em ordem decrescente da data.
 
 12 Liste todos os imóveis cujo preço de venda esteja entre 
 110mil e 200mil, ou seja, do vendedor 1 em ordem de área útil.
+
