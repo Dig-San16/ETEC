@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IWPP3FyU75M=",
+  "dgSpecHash": "gpAmufvutCY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Calculo_IMC\\Calculo_IMC.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\rnten\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.21\\microsoft.netcore.app.ref.8.0.21.nupkg.sha512",
-    "C:\\Users\\rnten\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.21\\microsoft.windowsdesktop.app.ref.8.0.21.nupkg.sha512",
-    "C:\\Users\\rnten\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.21\\microsoft.aspnetcore.app.ref.8.0.21.nupkg.sha512",
-    "C:\\Users\\rnten\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.21\\microsoft.netcore.app.host.win-x64.8.0.21.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\xampp\\htdocs\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Calculo_IMC\\Calculo_IMC.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

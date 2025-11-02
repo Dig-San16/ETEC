@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Calculo_IMC\\Calculo_IMC.csproj": {}
+    "C:\\xampp\\htdocs\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Calculo_IMC\\Calculo_IMC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Calculo_IMC\\Calculo_IMC.csproj": {
+    "C:\\xampp\\htdocs\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Calculo_IMC\\Calculo_IMC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Calculo_IMC\\Calculo_IMC.csproj",
+        "projectUniqueName": "C:\\xampp\\htdocs\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Calculo_IMC\\Calculo_IMC.csproj",
         "projectName": "Calculo_IMC",
-        "projectPath": "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Calculo_IMC\\Calculo_IMC.csproj",
+        "projectPath": "C:\\xampp\\htdocs\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Calculo_IMC\\Calculo_IMC.csproj",
         "packagesPath": "C:\\Users\\rnten\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Calculo_IMC\\obj\\",
+        "outputPath": "C:\\xampp\\htdocs\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Calculo_IMC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rnten\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\rnten\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,24 +56,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.21, 8.0.21]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
