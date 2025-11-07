@@ -57,7 +57,7 @@ for($i=0; $i<10; $i++){
 }
 
 
-//VETORES
+//VETORES e MATRIZES
 
 $frutas = ["Maçã", "Banana", "Laranja"];
 echo "<br>";

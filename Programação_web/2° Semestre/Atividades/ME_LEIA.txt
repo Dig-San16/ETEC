@@ -1,6 +1,5 @@
 arquivos em PHP são executáveis no xampp, portanto, coloque o arquivo php 
-nesse caminho para toda vez que desejar
-executá-los:
+nesse caminho para toda vez que desejar executá-los:
 
 xampp/htdocs/seu_arquivo
 

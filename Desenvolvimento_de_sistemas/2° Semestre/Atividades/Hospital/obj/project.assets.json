@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\xampp\\htdocs\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Hospital\\Hospital.csproj",
+      "projectUniqueName": "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Hospital\\Hospital.csproj",
       "projectName": "Hospital",
-      "projectPath": "C:\\xampp\\htdocs\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Hospital\\Hospital.csproj",
+      "projectPath": "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Hospital\\Hospital.csproj",
       "packagesPath": "C:\\Users\\rnten\\.nuget\\packages\\",
-      "outputPath": "C:\\xampp\\htdocs\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Hospital\\obj\\",
+      "outputPath": "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Hospital\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rnten\\AppData\\Roaming\\NuGet\\NuGet.Config",
