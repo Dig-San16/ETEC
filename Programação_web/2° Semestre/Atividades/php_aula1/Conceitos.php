@@ -2,7 +2,7 @@
 
 // TIPOS DE DADOS
 
-$nome = "Pamela";
+$nome = "Mano";
 $idade = 20;
 $idades = "20";
 echo "Boa noite, " .$nome;

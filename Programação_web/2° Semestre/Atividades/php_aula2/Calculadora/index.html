@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <form action="calculadora.php" method="post">
+        <label for="">Numero1</label>
+        <input type="number" name="num1" required><br>
+
+        <label for="">Numero2</label>
+        <input type="number" name="num2" required><br>
+
+        <select name="operacao" id="">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="x">x</option>
+            <option value="/">/</option>
+        </select><br>
+
+        <button type="submit">Calcular</button>
+
+    </form>
+</body>
+</html>

@@ -1,4 +1,5 @@
 <?php 
+// include importa arquivos
 include "juroslib.php";
 
 if($_POST["c"]>0){

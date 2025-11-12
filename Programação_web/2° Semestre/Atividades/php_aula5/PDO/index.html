@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+
+    <!--Título-->
+    <header>   
+        <h1>Cadastro de alunos</h1>
+    </header>
+
+    <!--Seção de cadastro-->
+    <section>
+        <form action="inserir.php" method="POST">
+            <br>
+            <label for="">Nome</label>
+            <input type="text" name="nome" placeholder="ex: Douglas" required>
+            <br>
+            <label for="">Idade</label>
+            <input type="number" name="idade" placeholder="ex: 67" required>
+            <br>
+            <label for="">Email</label>
+            <input type="text" name="email" placeholder="ex: douglas@gmail.com" required>
+            <br>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+
+    <!--Rodapé do banco de dados-->
+    <br>
+    <footer>
+        <p>Quais alunos foram cadastrados?</p>
+        <a href="listar.php">Clique aqui!</a>
+    </footer>
+
+    <!--Estilização-->
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        header {
+            color: black;
+            background-color: rgba(206, 206, 206, 1);
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 300px;
+            margin: 20px auto; 
+        }
+    </style>
+</body>
+</html>

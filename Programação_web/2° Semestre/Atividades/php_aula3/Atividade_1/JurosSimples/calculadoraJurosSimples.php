@@ -10,13 +10,13 @@
     <form action="resultadoJurosSimples.php" method="post">
     <pre>
     <label for="">Montante final</label>
-    <input type="text" name="j" id="">
+    <input type="number" name="j" id="">
      <label for="">Capital Inicial</label>
-    <input type="text" name="c" id="">
+    <input type="number" name="c" id="">
      <label for="">taxa</label>
-    <input type="text" name="i" id="">
+    <input type="number" name="i" id="">
      <label for="">Tempo</label>
-    <input type="text" name="t" id="">
+    <input type="number" name="t" id="">
     <input type="submit" value="Calcular">
     </form>
 </body>
