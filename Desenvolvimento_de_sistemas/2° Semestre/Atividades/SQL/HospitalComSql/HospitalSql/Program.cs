@@ -15,7 +15,7 @@ namespace Hospital
         public int idade;
         public int cpf;
         public string preferencial;
-        static string conexaoString = "server=localhost; uid=root; pwd=Rnt915302@; database=hospital; port=3306";
+        static string conexaoString = "server=localhost; uid=root; pwd=; database=hospital; port=3306";
         static List<Paciente> pacientes = new List<Paciente>();
 
         public void Lobby()
