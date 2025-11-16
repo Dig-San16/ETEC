@@ -8,27 +8,33 @@
  * podem ser métodos (funções) ou valores.
  */ 
 
-console.log('\n -------------- ATRIBUTO DINÂMICO');
+console.log('\n -------------- ATRIBUTO DINÂMICO --------------');
+
 const object = {
     getName() {
         return this?.name ?? "Objeto sem nome";
     }
 }
-
 console.log(object.getName());
 
 object.name = "Otannael";
-
 console.log("Método: " + object.getName(), "Atributo: " + object.name);
 
-console.log('\n -------------- ATRIBUTO JÁ DEFINIDO');
+
+console.log('\n -------------- ATRIBUTO JÁ DEFINIDO --------------');
+
 let carro = {
+
+    //atributos
     marca: "Toyota",
     modelo: "Corolla",
     ano: 2022,
+
+    //método
     ligar: function() {
         console.log("O " + this.modelo + " está ligado.");
     }
+    
 };
 
 carro.ligar();

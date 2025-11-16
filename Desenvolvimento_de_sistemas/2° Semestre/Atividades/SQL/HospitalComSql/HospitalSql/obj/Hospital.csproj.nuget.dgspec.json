@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Hospital\\Hospital.csproj": {}
+    "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\SQL\\HospitalComSql\\HospitalSql\\Hospital.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Hospital\\Hospital.csproj": {
+    "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\SQL\\HospitalComSql\\HospitalSql\\Hospital.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Hospital\\Hospital.csproj",
+        "projectUniqueName": "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\SQL\\HospitalComSql\\HospitalSql\\Hospital.csproj",
         "projectName": "Hospital",
-        "projectPath": "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Hospital\\Hospital.csproj",
+        "projectPath": "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\SQL\\HospitalComSql\\HospitalSql\\Hospital.csproj",
         "packagesPath": "C:\\Users\\rnten\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\Hospital\\obj\\",
+        "outputPath": "C:\\Users\\rnten\\ETEC\\Desenvolvimento_de_sistemas\\2° Semestre\\Atividades\\SQL\\HospitalComSql\\HospitalSql\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rnten\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.5.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

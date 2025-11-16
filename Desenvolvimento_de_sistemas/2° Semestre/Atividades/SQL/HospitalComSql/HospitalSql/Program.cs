@@ -4,263 +4,20 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace Hospital
 {
     class Paciente
     {
-        //Atributos (características)
+
         public string nome;
         public int idade;
-        public string cpf;
+        public int cpf;
         public string preferencial;
+        static string conexaoString = "server=localhost; uid=root; pwd=Rnt915302@; database=hospital; port=3306";
+        static List<Paciente> pacientes = new List<Paciente>();
 
-        // static significa que algo é compartilhado por todas as instâncias da classe (ou seja, pode ser acessada por qualquer
-        // método ou classe)
-        public static List<Paciente> pacientes = new List<Paciente>();
-
-        //Método de cadastrar
-        public void Cadastro()
-        {
-            //este código vai repetir até tudo ser preenchido
-            while (true)
-            {
-                // Try é usado quando se espera um erro acontecer no código
-                try
-                {
-                    // condição caso o número de pacientes chegar a 15
-                    if (pacientes.Count >= 15)
-                    {
-                        Console.WriteLine("Não é possível cadastrar mais pacientes. Limite de 15 atingido.\n");
-                        return;
-                    }
-                    // seção de perguntas e respostas
-                    Console.Clear();
-                    Console.Write("Digite seu nome: ");
-                    nome = Console.ReadLine();
-                    Console.Write("Digite sua idade: ");
-                    idade = int.Parse(Console.ReadLine());
-                    Console.Write("Digite seu CPF: ");
-                    cpf = Console.ReadLine();
-                    Console.Write("Possui alguma deficiência? (S/N): ");
-                    preferencial = Console.ReadLine().Trim().ToUpper();
-
-                    // condição caso o usuário digitar qualquer coisa em uma pergunta que vale apenas 2 respostas
-                    if (preferencial != "S" && preferencial != "N")
-                    {
-                        Console.WriteLine("Ocorreu um erro durante o cadastro, tente novamente.\n");
-                        continue;
-                    }
-
-                    // adiciona todos os dados digitados na lista "pacientes" e encerra a seção de cadastro
-                    pacientes.Add(this);
-                    Console.WriteLine("Cadastro realizado!\n");
-                    break;
-                }
-
-                // catch lida com o erro que ocorrer no programa (aqui no caso, exception lida com qualquer tipo de erro)
-                catch (Exception)
-                {
-                    Console.WriteLine("Ocorreu um erro durante o cadastro, tente novamente.\n");
-                }
-            }
-        }
-
-        //Método de Listagem
-        public void Listagem()
-        {
-            Console.Clear();
-
-            // aqui a condição mostra os pacientes cadastrados
-            if (pacientes.Count > 0)
-            {
-                // for identifica os dados dos paciente
-                for (int i = 0; i < pacientes.Count; i++)
-                {
-                    // cria-se então um objeto que referencia esses dados para enfim mostra-los
-                    Paciente dados = pacientes[i];
-                    Console.WriteLine("-------------------------------");
-                    Console.WriteLine("Nome: {0}\nIdade: {1}\nCPF: {2}\nPreferencial: {3}", dados.nome, dados.idade, dados.cpf, dados.preferencial);
-                    Console.WriteLine("-------------------------------\n");
-                }
-            }
-            // condição caso não houver nenhum paciente na lista "pacientes"
-            else
-            {
-                Console.WriteLine("Nenhum paciente cadastrado ainda.\n");
-            }
-        }
-        //Método de atendimento
-        public void Atender()
-        {
-            Console.Clear();
-
-            //condição caso a lista "pacientes" não ter nenhum paciente cadastrado
-            if (pacientes.Count == 0)
-            {
-                Console.WriteLine("Não há pacientes para atender.\n");
-            }
-            else
-            {
-                // cria -se um objeto que fará referência aos pacientes com propriedade preferencial
-                // (pacientes preferenciais foram aqueles que responderam "S" de sim na ultima pergunta do cadastro)
-                Paciente atender = pacientes.Find(paciente => paciente.preferencial == "S");
-
-                // condição caso não houver paciente com atendimento preferencial
-                if (atender == null)
-                {
-                    atender = pacientes[0];
-                }
-
-                //aqui remove cada paciente que for atendido
-                pacientes.Remove(atender);
-
-                // condição que identifica alguns pacientes 
-                // (se um deles possuir alguma deficiência ou forem mais velhos, eles serão atendidos primeiro)
-                if (atender.preferencial == "S")
-                {
-                    Console.WriteLine($"Paciente deficiente {atender.nome} atendido com prioridade!\n");
-                }
-                else if (atender.idade >= 60)
-                {
-                    Console.WriteLine($"Paciente idoso {atender.nome} atendido com prioridade!\n");
-                }
-                else
-                {
-                    Console.WriteLine($"Paciente {atender.nome} atendido!\n");
-                }
-            }
-        }
-
-        // Método de mudar dados de um paciente
-        public void Mudar()
-        {
-            Console.Clear();
-
-            //aqui diz para digitar o cpf do paciente que pretende fazer as alterações de dados
-            Console.Write("Digite o CPF do paciente que deseja alterar: ");
-            string buscarCpf = Console.ReadLine();
-
-            //esse objeto faz referencia ao cpf digitado pelo usuário
-            Paciente paciente = pacientes.Find(p => p.cpf == buscarCpf);
-
-            // essa condição identifica se o cpf foi digitado
-            if (paciente is not null)
-            {
-                int escolha;
-                // aqui, a condição irá repetir até que o usuário escreva 0 para sair
-                do
-                {
-                    // título, opçôes, e a escolha
-                    Console.WriteLine("\nALTERAÇÃO DE DADOS PARA {0}", paciente.nome);
-                    Console.WriteLine("Digite o que pretende alterar:");
-                    Console.WriteLine("1: Nome");
-                    Console.WriteLine("2: Idade");
-                    Console.WriteLine("3: CPF");
-                    Console.WriteLine("4: Preferencial");
-                    Console.WriteLine("0: Finalizar");
-                    Console.Write("Escolha: ");
-
-                    // condição caso o opção não seja um número
-                    // ela tenta converter a opção digitada para inteiro, se a opção não for inteira, retorna 
-                    // a opção como inválida
-                    if (!int.TryParse(Console.ReadLine(), out escolha))
-                    {
-                        Console.WriteLine("Opção inválida! Digite um número.");
-                        continue;
-                    }
-
-                    // condição que identifica a opção e executa o código 
-                    switch (escolha)
-                    {
-                        // caso for alterar o nome 
-                        case 1:
-                            Console.Write($"Nome atual: {paciente.nome}. Novo nome: ");
-                            string novoNome = Console.ReadLine();
-
-                            //A condição será true somente se "novoNome" tiver algum valor (não for nulo nem vazio).
-                            if (!string.IsNullOrEmpty(novoNome))
-                            {
-                                paciente.nome = novoNome;
-                                Console.WriteLine("Nome alterado com sucesso!");
-                            }
-                            // se não for digitado nada, ou seja, o valor for nulo e vazio, retornará nada
-                            else
-                            {
-                                Console.WriteLine("Nome não alterado.");
-                            }
-                            break;
-                            
-                        // caso for alterar a idade    
-                        case 2:
-                            Console.Write($"Idade atual: {paciente.idade}. Nova idade: ");
-                            string idadeStr = Console.ReadLine();
-
-                            if (int.TryParse(idadeStr, out int novaIdade))
-                            {
-                                paciente.idade = novaIdade;
-                                Console.WriteLine("Idade alterada com sucesso!");
-                            }
-                            else
-                            {
-                                Console.WriteLine("Idade Não alterada.");
-                            }
-                            break;
-                            
-                        // caso for alterar o cpf
-                        case 3:
-                            Console.Write($"CPF atual: {paciente.cpf}. Novo CPF: ");
-                            string novoCpf = Console.ReadLine();
-
-                            if (!string.IsNullOrEmpty(novoCpf))
-                            {
-                                paciente.cpf = novoCpf;
-                                Console.WriteLine("CPF alterado com sucesso!");
-                            }
-                            else
-                            {
-                                Console.WriteLine("CPF não alterado.");
-                            }
-                            break;
-
-                        // caso for alterar a preferencial
-                        case 4:
-                            Console.Write($"Preferencial atual: {paciente.preferencial}. É preferencial? (S/N): ");
-                            string novoPreferencial = Console.ReadLine().Trim().ToUpper();
-
-                            if (novoPreferencial == "S" || novoPreferencial == "N")
-                            {
-                                paciente.preferencial = novoPreferencial;
-                                Console.WriteLine("Preferencia alterada com sucesso!");
-                            }
-                            else
-                            {
-                                Console.WriteLine("Preferencial não alterado, Use S ou N");
-                            }
-                            break;
-
-                        // caso for sair
-                        case 0:
-                            Console.Clear();
-                            break;
-
-                        // se não digitar os números de 0 a 4. 
-                        default:
-                            Console.WriteLine("Opção inválida! Escolha entre 0-4");
-                            break;
-                    }
-
-                } while (escolha != 0);
-            }
-
-            // condição caso não for digitado nada ou o cpf digitado não existe
-            else
-            {
-                Console.WriteLine("Paciente não encontrado.\n");
-            }
-        }
-
-        // Método do menu
         public void Lobby()
         {
             while (true)
@@ -277,18 +34,20 @@ namespace Hospital
                 
                 Paciente pessoa = new Paciente();
 
-                // aqui digita-se as opções com base em sua letra especifica
                 switch (resposta)
                 {
                     case "C":
                         pessoa.Cadastro();
                         break;
+                       
                     case "L":
                         pessoa.Listagem();
                         break;
+                     
                     case "A":
                         pessoa.Atender();
                         break;
+
                     case "M":
                         pessoa.Mudar();
                         break;
@@ -300,6 +59,259 @@ namespace Hospital
                         break;
                 }
             }
+        }
+
+        public void Cadastro()
+        {
+            while (true)
+            {
+                try
+                {                
+                    Console.Clear();
+                    Console.Write("Digite seu nome: ");
+                    nome = Console.ReadLine();
+                    Console.Write("Digite sua idade: ");
+                    idade = int.Parse(Console.ReadLine());
+                    Console.Write("Digite seu CPF: ");
+                    cpf = int.Parse(Console.ReadLine());
+                    Console.Write("Possui alguma deficiência? (S/N): ");
+                    preferencial = Console.ReadLine().Trim().ToUpper();
+     
+                    if (preferencial != "S" && preferencial != "N")
+                    {
+                        Console.WriteLine("Ocorreu um erro durante o cadastro, tente novamente.\n");
+                        continue;
+                    }
+
+                    using (MySqlConnection conexao = new MySqlConnection(conexaoString)) 
+                    {
+                        conexao.Open();
+                        Console.WriteLine("\nCadastro realizado!\n");
+
+                        string sqlInsert = @"insert into paciente (nome, idade, cpf, preferencial) values 
+                                            (@nome, @idade, @cpf, @preferencial)";
+
+                        using (MySqlCommand cmd = new MySqlCommand(sqlInsert, conexao))
+                        {
+                            cmd.Parameters.AddWithValue("@nome", nome);
+                            cmd.Parameters.AddWithValue("@idade", idade);
+                            cmd.Parameters.AddWithValue("@cpf", cpf);
+                            cmd.Parameters.AddWithValue("@preferencial", preferencial);
+                            cmd.ExecuteNonQuery();
+                            break;
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Ocorreu um erro durante o cadastro, tente novamente.\n");
+                }
+            }
+        }
+
+        public void Listagem()
+        {
+            Console.Clear();
+
+            using (MySqlConnection conexao = new MySqlConnection(conexaoString)) 
+            {
+                conexao.Open();
+                Console.WriteLine("\nConfira a lista de pacientes a seguir:\n");
+
+                string sqlSelect = "select * from paciente";
+                using (MySqlCommand cmd = new MySqlCommand(sqlSelect, conexao))
+                    {
+                        using MySqlDataReader ler = cmd.ExecuteReader();
+
+                        while (ler.Read())
+                        {
+                            int id = Convert.ToInt32(ler["id"]);
+                            string nome = ler.GetString("nome");
+                            int idade = Convert.ToInt32(ler["idade"]);
+                            int cpf = Convert.ToInt32(ler["cpf"]);
+                            string preferencial = ler.GetString("preferencial");
+
+                            Console.WriteLine("-------------------------------");
+                            Console.WriteLine("Nome: {0}\nIdade: {1}\nCPF: {2}\nPreferencial: {3}", nome, idade, cpf, preferencial);
+                            Console.WriteLine("-------------------------------\n");                            
+                        } 
+                    }
+                }
+            }
+
+        public void Atender()
+        {
+            Console.Clear();
+
+            using (MySqlConnection conexao = new MySqlConnection(conexaoString))
+            {
+                conexao.Open();
+
+                string sqlSelect = @"SELECT * FROM paciente 
+                                    ORDER BY preferencial = 'N', 
+                                    idade < 60, 
+                                    id ASC";
+
+                MySqlCommand cmdSelect = new MySqlCommand(sqlSelect, conexao);
+                MySqlDataReader reader = cmdSelect.ExecuteReader();
+
+                if (!reader.Read())
+                {
+                    Console.WriteLine("\nNenhum paciente na fila.\n");
+                    return;
+                }
+
+                int id = Convert.ToInt32(reader["id"]);
+                string nome = reader.GetString("nome");
+                int idade = Convert.ToInt32(reader["idade"]);
+                string preferencial = reader.GetString("preferencial");
+
+                reader.Close();
+
+                string sqlDelete = "DELETE FROM paciente WHERE id = @id";
+
+                MySqlCommand cmdDelete = new MySqlCommand(sqlDelete, conexao);
+                cmdDelete.Parameters.AddWithValue("@id", id);
+                cmdDelete.ExecuteNonQuery();
+
+                if (preferencial == "S")
+                {
+                    Console.WriteLine($"Paciente preferencial {nome} atendido com sucesso!\n");
+                } 
+                else if (idade >= 60)
+                {
+                    Console.WriteLine($"Paciente idoso {nome} atendido com sucesso!\n");
+                } 
+                else
+                {
+                    Console.WriteLine($"Paciente {nome} atendido com sucesso!\n");
+                }
+            }
+        }
+        public void Mudar()
+        {
+            Console.Clear();
+
+            Console.Write("Digite o CPF do paciente que deseja alterar: ");
+            string buscarCpf = Console.ReadLine();
+
+            if (!int.TryParse(buscarCpf, out int cpfBusca))
+            {
+                Console.WriteLine("CPF inválido.");
+                return;
+            }
+
+            Paciente paciente = null;
+
+            using (MySqlConnection conexao = new MySqlConnection(conexaoString))
+            {
+                conexao.Open();
+
+                string sqlSelect = "SELECT * FROM paciente WHERE cpf = @cpf LIMIT 1";
+
+                using (MySqlCommand cmd = new MySqlCommand(sqlSelect, conexao))
+                {
+                    cmd.Parameters.AddWithValue("@cpf", cpfBusca);
+
+                    using (MySqlDataReader ler = cmd.ExecuteReader())
+                    {
+                        if (ler.Read())
+                        {
+                            paciente = new Paciente();
+                            paciente.nome = ler.GetString("nome");
+                            paciente.idade = Convert.ToInt32(ler["idade"]);
+                            paciente.cpf = Convert.ToInt32(ler["cpf"]);
+                            paciente.preferencial = ler.GetString("preferencial");
+                        }
+                    }
+                }
+            }
+
+            if (paciente == null)
+            {
+                Console.WriteLine("Paciente não encontrado.");
+                return;
+            }
+
+            int escolha;
+            do
+            {
+                Console.WriteLine($"\nALTERAÇÃO DE DADOS PARA {paciente.nome}");
+                Console.WriteLine("1: Nome");
+                Console.WriteLine("2: Idade");
+                Console.WriteLine("3: CPF");
+                Console.WriteLine("4: Preferencial");
+                Console.WriteLine("0: Finalizar");
+                Console.Write("Escolha: ");
+
+                if (!int.TryParse(Console.ReadLine(), out escolha))
+                {
+                    Console.WriteLine("Opção inválida!");
+                    continue;
+                }
+
+                switch (escolha)
+                {
+                    case 1:
+                        Console.Write($"Nome atual: {paciente.nome}.\nNovo nome: ");
+                        string novoNome = Console.ReadLine();
+                        if (!string.IsNullOrEmpty(novoNome))
+                            paciente.nome = novoNome;
+                        break;
+
+                    case 2:
+                        Console.Write($"Idade atual: {paciente.idade}.\nNova idade: ");
+                        if (int.TryParse(Console.ReadLine(), out int novaIdade))
+                            paciente.idade = novaIdade;
+                        break;
+
+                    case 3:
+                        Console.Write($"CPF atual: {paciente.cpf}.\nNovo CPF: ");
+                        if (int.TryParse(Console.ReadLine(), out int novoCpfNum))
+                            paciente.cpf = novoCpfNum;
+                        break;
+
+                    case 4:
+                        Console.Write($"Preferencial atual: {paciente.preferencial}.\n(S/N): ");
+                        string novoPref = Console.ReadLine().Trim().ToUpper();
+                        if (novoPref == "S" || novoPref == "N")
+                            paciente.preferencial = novoPref;
+                        break;
+
+                    case 0:
+                        break;
+
+                    default:
+                        Console.WriteLine("Opção inválida!");
+                        break;
+                }
+
+            } while (escolha != 0);
+
+            using (MySqlConnection conexao = new MySqlConnection(conexaoString))
+            {
+                conexao.Open();
+
+                string sqlUpdate =
+                @"UPDATE paciente SET 
+                    nome=@nome, 
+                    idade= @idade, 
+                    cpf = @cpfNovo, 
+                    preferencial = @preferencial 
+                WHERE cpf = @cpfAntigo";
+
+                using (MySqlCommand cmd = new MySqlCommand(sqlUpdate, conexao))
+                {
+                    cmd.Parameters.AddWithValue("@nome", paciente.nome);
+                    cmd.Parameters.AddWithValue("@idade", paciente.idade);
+                    cmd.Parameters.AddWithValue("@cpfNovo", paciente.cpf);
+                    cmd.Parameters.AddWithValue("@preferencial", paciente.preferencial);
+                    cmd.Parameters.AddWithValue("@cpfAntigo", cpfBusca);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            Console.WriteLine("\nDados atualizados com sucesso!");
         }
     }
 }

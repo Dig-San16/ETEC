@@ -1,0 +1,41 @@
+-------Instalando FLutter e Dart------
+
+Para instalar o Flutter. Vá neste link
+
+https://docs.flutter.dev/install/manual
+
+Baixe a versão estável para Windows e extraia em:
+
+C:\flutter
+
+Abra Variáveis de Ambiente → Path → adicionar:
+
+C:\flutter/bin
+
+No terminal, teste:
+
+flutter --version
+
+
+-------Execução de arquivos Dart------
+
+Agora, para executar arquivos Dart, digite no terminal do vscode:
+
+dart run [nome_arquivo]
+
+
+-------Execução de projetos Flutter------
+
+Crie um projeto flutter:
+
+flutter create [nome_projeto]
+
+Abra o projeto no vscode:
+
+cd [nome_projeto]
+code .
+
+envie os arquivos dart na pasta lib/, e então execute:
+
+flutter run
+

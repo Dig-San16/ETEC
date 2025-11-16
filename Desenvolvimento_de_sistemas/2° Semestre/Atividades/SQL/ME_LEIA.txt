@@ -1,18 +1,42 @@
-Para executar arquivos em c# com sql, baixe a biblioteca MySql.Data no site ou no terminal do 
-vscode. Se tiver o .NET instalado, execute no terminal (do vscode):
+-------EXECUTANDO ARQUIVOD C# COM SQL--------
+
+Para executar arquivos em c# com sql, baixe a biblioteca MySql.Data no site ou no terminal.
+Se tiver o .NET instalado, execute no terminal (do vscode):
 
 dotnet add package MySql.Data
 
 teste se a biblioteca foi instalada escrevendo no arquivo c#:
 
 using MySql.Data.MySqlClient;
-MySqlConnection conexao = new MySqlConnection("server=localhost;uid=root;pwd=;database=teste;");
-using (MySqlConnection conexao = new MySqlConnection(conexaoString)) {
-	conexao.Open();
-	Console.WriteLine("conexão foi um sucesso");
-}
 
-Obs: é necessário ter um SGBD(MySQL, PostgreSQL...) instalado para executar os bancos
+static string conexaoString = "server=localhost;uid=root;pwd=;database=curso;port=3306";
+
+    static void Main()
+    {
+        using (MySqlConnection conexao = new MySqlConnection(conexaoString))
+        {
+            conexao.Open();
+            Console.WriteLine("Conexão foi um sucesso");
+        }
+    }
+
+Obs: é necessário ter um SGBD(MySQL, PostgreSQL...) instalado para executar os bancos,
      se o banco tiver senha, coloque-a na parte "pwd" da string conexao
 
      ex: string conexaoString = "server=localhost;uid=root;pwd=SUA_SENHA;database=teste;";
+
+
+-------OPERAÇÕES CRUD--------
+
+Para manipular dados no MySQL, usarêmos a classê MySqlCommand, cujos mêtodos 
+principais sao:
+
+ • ExecuteReader – êxEcuta consultas (SELECT) ê rêtorna um MySqlDataReader quê 
+lê multiplos rêgistros.
+
+ • ExecuteNonQuery – êxêcuta comandos quê nao rêtornam dados (como INSERT, 
+UPDATE ê DELETE).
+
+ • ExecuteScalar – rêtorna um unico valor (por êxêmplo, o rêsultado dê SELECT 
+COUNT(*))
+
