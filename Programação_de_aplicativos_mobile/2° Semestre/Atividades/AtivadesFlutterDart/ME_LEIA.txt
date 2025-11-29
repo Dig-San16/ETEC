@@ -1,18 +1,64 @@
+------O que é o Flutter?------
+
+Flutter é um framework multiplataforma criado pelo Google para 
+desenvolver aplicativos mobile (Android/iOS), web, desktop e até sistemas embarcados, 
+usando apenas uma única base de código. Ele usa a linguagem Dart, também criada pelo Google.
+
+Principais características:
+
+Hot Reload – altera o código e vê o resultado instantaneamente.
+Alto desempenho – quase nativo, pois Flutter renderiza sua própria interface.
+Multiplataforma – um código, vários dispositivos.
+Widgets personalizáveis – UI flexível e moderna.
+
+------Para que serve o Flutter?------
+
+É usado para criar:
+
+Apps para Android e iOS
+Sites responsivos (Flutter Web)
+Aplicativos desktop (Windows, macOS, Linux)
+Softwares corporativos
+Apps para startups com MVP rápido
+Interfaces para IoT e sistemas embarcados
+
+------Mercado de trabalho------
+
+O mercado está muito aquecido por alguns motivos:
+
+Empresas querem reduzir custos
+Flutter permite criar app Android + iOS com o mesmo código.
+Muito usado em startups e empresas grandes
+
+Exemplos: Google Ads, Nubank (alguns módulos), Aliexpress.
+
+Demanda maior que oferta
+Para quem está começando, é uma das melhores tecnologias para entrar no mercado mobile.
+
+Salários
+
+Média Brasil:
+
+Júnior: R$ 3.000 – R$ 5.000
+Pleno: R$ 6.000 – R$ 10.000
+Sênior: R$ 10.000 – R$ 18.000
+
+
 -------Instalando FLutter e Dart------
 
-Para instalar o Flutter. Vá neste link
+#Para instalar o Flutter. Vá neste link
 
 https://docs.flutter.dev/install/manual
 
-Baixe a versão estável para Windows e extraia em:
+#Baixe a versão estável para Windows e extraia em:
 
 C:\flutter
 
-Abra Variáveis de Ambiente → Path → adicionar:
+#Abra Variáveis de Ambiente → Path → adicionar:
 
 C:\flutter/bin
 
-No terminal, teste:
+#No terminal, teste:
 
 flutter --version
 
@@ -26,16 +72,173 @@ dart run [nome_arquivo]
 
 -------Execução de projetos Flutter------
 
-Crie um projeto flutter:
+#Crie um projeto flutter:
 
 flutter create [nome_projeto]
 
-Abra o projeto no vscode:
+#Abra o projeto no vscode:
 
 cd [nome_projeto]
 code .
 
-envie os arquivos dart na pasta lib/, e então execute:
+#envie os arquivos dart na pasta lib/, e então execute:
 
 flutter run
+
+------Explicando as widgets Stateless e Stateful ------
+
+StatelessWidget:
+
+Não muda depois de criado
+Usado para telas estáticas
+Não tem estado interno
+
+StatefulWidget:
+
+Pode mudar durante o uso
+Ideal para interações
+Possui o método setState()
+
+------Consumindo APIs em Flutter------
+
+Usaremos a biblioteca http.
+
+Instale no pubspec.yaml:
+
+dependencies:
+  http: ^1.2.0
+
+Execute:
+flutter pub get
+
+------Métodos de API (GET, POST, PUT, DELETE)------
+
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
+// GET
+var resposta = await http.get(Uri.parse("url"));
+// POST
+var resposta = await http.post(Uri.parse("url"), body: {"nome": "Ana"});
+// PUT
+var resposta = await http.put(Uri.parse("url/1"), body: {"nome": "João"});
+// DELETE
+var resposta = await http.delete(Uri.parse("url/1"));
+
+------Arquitetura MVC em Flutter e Dart------
+
+Apesar de o Flutter não impor um padrão arquitetural, é totalmente possível 
+e comum organizar projetos usando MVC (Model–View–Controller). A divisão fica assim:
+
+Model (Modelo)
+
+Representa os dados, regras de negócio e transformações.
+
+Exemplo de paciente_model.dart:
+
+class Paciente {
+  String nome;
+  int idade;
+  String cpf;
+
+  Paciente({
+    required this.nome,
+    required this.idade,
+    required this.cpf,
+  });
+}
+
+Controller (Controlador)
+
+Controla o fluxo da aplicação. A View pede ações ao Controller, e o Controller atualiza o Model.
+
+Exemplo de paciente_controller.dart:
+
+import '../models/paciente_model.dart';
+
+class PacienteController {
+  List<Paciente> pacientes = [];
+
+  void adicionarPaciente(Paciente p) {
+    pacientes.add(p);
+  }
+
+  Paciente? buscarPorCPF(String cpf) {
+    return pacientes.firstWhere(
+      (p) => p.cpf == cpf,
+      orElse: () => null,
+    );
+  }
+}
+
+
+View (Visão)
+
+É a interface, onde você cria widgets Flutter.
+Ela mostra dados e chama métodos do Controller, mas não contém regras de negócio.
+
+Exemplo de paciente_view.dart:
+
+import 'package:flutter/material.dart';
+import '../controllers/paciente_controller.dart';
+import '../models/paciente_model.dart';
+
+class PacienteView extends StatefulWidget {
+  const PacienteView({super.key});
+
+  @override
+  State<PacienteView> createState() => _PacienteViewState();
+}
+
+class _PacienteViewState extends State<PacienteView> {
+  final controller = PacienteController();
+
+  final nomeController = TextEditingController();
+  final idadeController = TextEditingController();
+  final cpfController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Cadastro de Pacientes')),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            TextField(controller: nomeController, decoration: const InputDecoration(labelText: 'Nome')),
+            TextField(controller: idadeController, decoration: const InputDecoration(labelText: 'Idade')),
+            TextField(controller: cpfController, decoration: const InputDecoration(labelText: 'CPF')),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                final paciente = Paciente(
+                  nome: nomeController.text,
+                  idade: int.parse(idadeController.text),
+                  cpf: cpfController.text,
+                );
+
+                controller.adicionarPaciente(paciente);
+                setState(() {});
+              },
+              child: const Text('Cadastrar'),
+            ),
+            const SizedBox(height: 16),
+            Expanded(
+              child: ListView.builder(
+                itemCount: controller.pacientes.length,
+                itemBuilder: (context, index) {
+                  final p = controller.pacientes[index];
+                  return ListTile(
+                    title: Text(p.nome),
+                    subtitle: Text("Idade: ${p.idade} | CPF: ${p.cpf}"),
+                  );
+                },
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
 
