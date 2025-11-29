@@ -1,4 +1,4 @@
-# ETEC
-Neste repositório , localiza-se  atividades, apostilas e exemplos vindos do curso de desenvolvimento de sistemas da ETEC.
+## Leia se for curioso
 
-obs: Faça o curso, você não vai se arrepender.
+Não espere nada desses códigos que fiz, foram um monte linguagem nova que me foi introduzida e nem todas me interessaram.
+Se quiser testar alguns programas, vá em frente e seja feliz.
