@@ -1,0 +1,6 @@
+<div [ngSwitch]="linguagem">
+    <p *ngSwitchCase="`HTML`">linguagem de marcação</p>
+    <p *ngSwitchCase="`CSS`">linguagem de estilo</p>
+    <p *ngSwitchCase="`JS`">linguagem de programação</p>
+    <p *ngSwitchCase="``">linguagem não encontrada</p>
+</div>

@@ -1,0 +1,8 @@
+No primeiro semestre de desenvolvimento de sistemas, aprendemos sobre a linguagem C# 
+e os conceitos de programação orientada a objetos (herança, encapsulamento, polimorfismo, abstração
+métodos, atributos, objetos, publico, privado e protegido)
+
+Utilizamos também SQL para a criação de sistemas integrado com o C# 
+
+Usamos um pouco as DLLs, que são biblioteca que contém código e dados reutilizáveis por 
+outros aplicativos.

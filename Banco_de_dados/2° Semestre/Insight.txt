@@ -1,0 +1,7 @@
+No segundo semestre de banco de dados, aprendemos a gerenciar banco de dados relacional com o MySQL
+
+utilizamos comandos de definição de dados DDL (create, alter, drop),
+comandos de consulta DQL (select, select/join),
+comandos de manipulação de dados DML (insert, update, delete),
+operadores (between, in, like, is, not, and, or) e 
+cláusula (where)

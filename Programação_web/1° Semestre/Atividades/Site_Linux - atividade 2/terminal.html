@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Linux - Experimente Comandos</title>
+    <link rel="stylesheet" href="RAR_linux.css">
+    <link rel="stylesheet" href="terminal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+      
+        <div class="container">
+        <div class="site-header">
+        <div class="logo-container">
+            <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Logo Linux">
+            </div>
+            <span class="logo-text"><h1>Linux</h1></span>
+        </div>
+        
+        <!-- Menu de navegação à direita -->
+        <nav>
+            <ul class="nav-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#historia">História</a></li>
+            <li><a href="#vantagens">Vantagens</a></li>
+            <li><a href="#comandos-basicos">Comandos Básicos</a></li>
+            <li><a href="distribuicoes.hmtl">Distribuições</a></li>
+            <li><a href="terminal.html">Terminal</a></li>
+            </ul>
+        </nav>
+        </div>
+        </div>
+
+    </header>
+
+    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1629654297299-c8506221ca97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');">
+        <div class="hero-content">
+            <h1>Terminal Linux</h1>
+            <p>Experimente o poder da linha de comando</p>
+            <div class="hero-buttons">
+                <a href="#terminal-demo" class="btn btn-primary">Iniciar Terminal</a>
+                <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="terminal-intro" class="section">
+            <div class="container">
+                <h2 class="section-title">O Poder do Terminal</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Eficiência</h3>
+                        <p>O terminal permite executar tarefas complexas com comandos simples, muitas vezes de forma mais rápida do que seria possível com uma interface gráfica.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Controle</h3>
+                        <p>Oferece acesso direto ao sistema operacional, permitindo configurações avançadas e operações que não estão disponíveis na interface gráfica.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Automação</h3>
+                        <p>Scripts de shell permitem automatizar tarefas repetitivas, economizando tempo e reduzindo erros humanos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="terminal-demo" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title">Terminal Interativo</h2>
+                <p class="section-description">Experimente alguns comandos básicos do Linux. Digite um comando e pressione Enter para ver o resultado.</p>
+                
+                <div class="terminal-container">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <div class="terminal-button red"></div>
+                            <div class="terminal-button yellow"></div>
+                            <div class="terminal-button green"></div>
+                        </div>
+                        <div class="terminal-title">usuario@linux:~</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div id="terminal-output" class="terminal-output">Bem-vindo ao terminal Linux simulado!
+Digite 'help' para ver os comandos disponíveis.</div>
+                        <div class="terminal-prompt">
+                            <span class="terminal-user">usuario</span><span class="terminal-at">@</span><span class="terminal-host">linux</span>:<span class="terminal-path">~</span>$ 
+                            <input type="text" id="terminal-input" class="terminal-input" autofocus>
+                            <span class="terminal-cursor"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-container">
+                    <a href="index.html" class="btn btn-back"><i class="fas fa-arrow-left"></i> Voltar ao Início</a>
+                    <a href="distribuicoes.html" class="btn btn-primary">Explorar Distribuições</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="terminal-commands" class="section">
+            <div class="container">
+                <h2 class="section-title">Comandos Úteis</h2>
+                <div class="table-container">
+                    <table class="commands-table">
+                        <thead>
+                            <tr>
+                                <th>Comando</th>
+                                <th>Descrição</th>
+                                <th>Exemplo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>ls</code></td>
+                                <td>Lista arquivos e diretórios</td>
+                                <td><code>ls -la</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>cd</code></td>
+                                <td>Muda de diretório</td>
+                                <td><code>cd /home/usuario</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>pwd</code></td>
+                                <td>Mostra o diretório atual</td>
+                                <td><code>pwd</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>mkdir</code></td>
+                                <td>Cria um diretório</td>
+                                <td><code>mkdir novo_diretorio</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>rm</code></td>
+                                <td>Remove arquivos ou diretórios</td>
+                                <td><code>rm -rf diretorio</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>cp</code></td>
+                                <td>Copia arquivos ou diretórios</td>
+                                <td><code>cp arquivo.txt /destino/</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>mv</code></td>
+                                <td>Move ou renomeia arquivos</td>
+                                <td><code>mv arquivo.txt novo_nome.txt</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>cat</code></td>
+                                <td>Exibe o conteúdo de arquivos</td>
+                                <td><code>cat arquivo.txt</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>grep</code></td>
+                                <td>Busca por padrões em arquivos</td>
+                                <td><code>grep "texto" arquivo.txt</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>chmod</code></td>
+                                <td>Altera permissões de arquivos</td>
+                                <td><code>chmod +x script.sh</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="terminal-tips" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title">Dicas para o Terminal</h2>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                        <h3>Atalhos de Teclado</h3>
+                        <p>Use Ctrl+C para interromper comandos, Ctrl+L para limpar a tela, e setas para cima/baixo para navegar pelo histórico de comandos.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3>Histórico</h3>
+                        <p>O comando <code>history</code> mostra os comandos usados anteriormente. Use <code>!n</code> para executar o comando número n do histórico.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <h3>Tab Completion</h3>
+                        <p>Pressione Tab para completar automaticamente nomes de comandos, arquivos e diretórios, economizando tempo e evitando erros de digitação.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-pipe-section"></i>
+                        </div>
+                        <h3>Pipes</h3>
+                        <p>Use o caractere | (pipe) para conectar a saída de um comando à entrada de outro, criando fluxos de processamento poderosos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Logo Linux">
+                    <h3>Linux</h3>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="index.html#historia">História</a></li>
+                        <li><a href="index.html#vantagens">Vantagens</a></li>
+                        <li><a href="index.html#comandos">Comandos</a></li>
+                        <li><a href="distribuicoes.html">Distribuições</a></li>
+                    </ul>
+                </div>
+                <div class="footer-resources">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="https://www.kernel.org/" target="_blank">Kernel.org</a></li>
+                        <li><a href="https://www.linuxfoundation.org/" target="_blank">Linux Foundation</a></li>
+                        <li><a href="https://www.gnu.org/software/bash/manual/" target="_blank">Manual Bash</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Projeto Linux. Todos os direitos reservados.</p>
+                <p>Desenvolvido para trabalho acadêmico.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

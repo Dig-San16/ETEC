@@ -1,0 +1,3 @@
+Em Sistemas embarcados, aprendemos sobre o Arduino, suas funções de prototipagem e suas utilizações em diferentes setores como
+da robótica, sistemas de automação, sensores e projetos interativos. Simulamos o funcionamento dos microcontroladores
+no app tinkercad, e utilizamos um pouco da linguagem de programação C++ 

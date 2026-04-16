@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuições Linux - Conheça as Principais</title>
+    <link rel="stylesheet" href="RAR_linux.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>    
+    <div class="container">
+    <div class="site-header">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Logo Linux">
+        </div>
+        <span class="logo-text"><h1>Linux</h1></span>
+      </div>
+      
+      <!-- Menu de navegação à direita -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#historia">História</a></li>
+          <li><a href="#vantagens">Vantagens</a></li>
+          <li><a href="#comandos-basicos">Comandos Básicos</a></li>
+          <li><a href="distribuicoes.hmtl">Distribuições</a></li>
+          <li><a href="terminal.html">Terminal</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+    </header>
+
+    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1629654297299-c8506221ca97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');">
+        <div class="hero-content">
+            <h1>Distribuições Linux</h1>
+            <p>Conheça as principais distribuições e encontre a ideal para você</p>
+            <div class="hero-buttons">
+                <a href="#distros" class="btn btn-primary">Explorar Distribuições</a>
+                <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="distros" class="section">
+            <div class="container">
+                <h2 class="section-title">Principais Distribuições</h2>
+                <div class="distro-grid">
+                    <div class="distro-card">
+                        <div class="distro-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Ubuntu_logo.svg/1200px-Ubuntu_logo.svg.png" alt="Ubuntu">
+                        </div>
+                        <div class="distro-content">
+                            <h3>Ubuntu</h3>
+                            <p>Uma das distribuições Linux mais populares, conhecida por sua facilidade de uso e interface amigável. Ideal para iniciantes e usuários que buscam estabilidade.</p>
+                            <div class="distro-tags">
+                                <span class="tag">Iniciantes</span>
+                                <span class="tag">Desktop</span>
+                                <span class="tag">Servidor</span>
+                            </div>
+                            <div class="distro-links">
+                                <a href="https://ubuntu.com/" target="_blank">Site Oficial <i class="fas fa-external-link-alt"></i></a>
+                                <a href="#ubuntu-info">Mais Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="distro-card">
+                        <div class="distro-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Fedora_logo.svg/1200px-Fedora_logo.svg.png" alt="Fedora">
+                        </div>
+                        <div class="distro-content">
+                            <h3>Fedora</h3>
+                            <p>Distribuição patrocinada pela Red Hat, focada em software livre e inovação. Oferece as tecnologias mais recentes e é uma ótima escolha para desenvolvedores.</p>
+                            <div class="distro-tags">
+                                <span class="tag">Desenvolvedores</span>
+                                <span class="tag">Inovação</span>
+                                <span class="tag">Desktop</span>
+                            </div>
+                            <div class="distro-links">
+                                <a href="https://getfedora.org/" target="_blank">Site Oficial <i class="fas fa-external-link-alt"></i></a>
+                                <a href="#fedora-info">Mais Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="distro-card">
+                        <div class="distro-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Archlinux-icon-crystal-64.svg/1200px-Archlinux-icon-crystal-64.svg.png" alt="Arch Linux">
+                        </div>
+                        <div class="distro-content">
+                            <h3>Arch Linux</h3>
+                            <p>Distribuição minimalista e flexível que segue o princípio KISS (Keep It Simple, Stupid). Oferece controle total sobre o sistema e é ideal para usuários avançados.</p>
+                            <div class="distro-tags">
+                                <span class="tag">Avançado</span>
+                                <span class="tag">Minimalista</span>
+                                <span class="tag">Customizável</span>
+                            </div>
+                            <div class="distro-links">
+                                <a href="https://archlinux.org/" target="_blank">Site Oficial <i class="fas fa-external-link-alt"></i></a>
+                                <a href="#arch-info">Mais Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="distro-card">
+                        <div class="distro-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Debian-OpenLogo.svg/1200px-Debian-OpenLogo.svg.png" alt="Debian">
+                        </div>
+                        <div class="distro-content">
+                            <h3>Debian</h3>
+                            <p>Uma das distribuições mais antigas e estáveis, conhecida por seu compromisso com o software livre. Base para muitas outras distribuições, incluindo o Ubuntu.</p>
+                            <div class="distro-tags">
+                                <span class="tag">Estável</span>
+                                <span class="tag">Universal</span>
+                                <span class="tag">Servidor</span>
+                            </div>
+                            <div class="distro-links">
+                                <a href="https://www.debian.org/" target="_blank">Site Oficial <i class="fas fa-external-link-alt"></i></a>
+                                <a href="#debian-info">Mais Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="distro-card">
+                        <div class="distro-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Manjaro-logo.svg/1200px-Manjaro-logo.svg.png" alt="Manjaro">
+                        </div>
+                        <div class="distro-content">
+                            <h3>Manjaro</h3>
+                            <p>Baseada no Arch Linux, mas com foco em facilidade de uso e acessibilidade. Oferece a potência do Arch com uma experiência mais amigável para iniciantes.</p>
+                            <div class="distro-tags">
+                                <span class="tag">Intermediário</span>
+                                <span class="tag">Desktop</span>
+                                <span class="tag">Rolling Release</span>
+                            </div>
+                            <div class="distro-links">
+                                <a href="https://manjaro.org/" target="_blank">Site Oficial <i class="fas fa-external-link-alt"></i></a>
+                                <a href="#manjaro-info">Mais Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="distro-card">
+                        <div class="distro-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Gentoo_Linux_logo_matte.svg/1200px-Gentoo_Linux_logo_matte.svg.png" alt="Gentoo">
+                        </div>
+                        <div class="distro-content">
+                            <h3>Gentoo</h3>
+                            <p>Distribuição avançada que compila todo o software a partir do código-fonte. Oferece desempenho otimizado e personalização extrema para usuários experientes.</p>
+                            <div class="distro-tags">
+                                <span class="tag">Avançado</span>
+                                <span class="tag">Otimizado</span>
+                                <span class="tag">Compilação</span>
+                            </div>
+                            <div class="distro-links">
+                                <a href="https://www.gentoo.org/" target="_blank">Site Oficial <i class="fas fa-external-link-alt"></i></a>
+                                <a href="#gentoo-info">Mais Detalhes</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ubuntu-info" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title">Ubuntu</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3>História</h3>
+                        <p>Lançado em 2004 pela Canonical, o Ubuntu foi criado com o objetivo de tornar o Linux mais acessível para usuários comuns. O nome "Ubuntu" vem de uma filosofia africana que significa "humanidade para com os outros".</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>Características</h3>
+                        <p>Ciclo de lançamento previsível (a cada 6 meses), com versões LTS (Long Term Support) a cada 2 anos. Interface gráfica GNOME (anteriormente Unity), fácil instalação e grande repositório de software.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Público-Alvo</h3>
+                        <p>Ideal para iniciantes no Linux, usuários domésticos, pequenas empresas e até mesmo servidores. Sua facilidade de uso e grande comunidade de suporte o tornam uma excelente escolha para quem está migrando do Windows ou macOS.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="fedora-info" class="section">
+            <div class="container">
+                <h2 class="section-title">Fedora</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3>História</h3>
+                        <p>Lançado em 2003 como sucessor do Red Hat Linux, o Fedora é patrocinado pela Red Hat e serve como plataforma de testes para tecnologias que eventualmente são incorporadas ao Red Hat Enterprise Linux.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>Características</h3>
+                        <p>Foco em software livre e de código aberto, ciclo de lançamento rápido (aproximadamente a cada 6 meses), interface GNOME por padrão e adoção precoce de novas tecnologias como Wayland e systemd.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Público-Alvo</h3>
+                        <p>Desenvolvedores, entusiastas de tecnologia e usuários que desejam acesso às tecnologias mais recentes. É uma excelente escolha para quem quer experimentar recursos de ponta do Linux.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="arch-info" class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title">Arch Linux</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3>História</h3>
+                        <p>Criado em 2002 por Judd Vinet, o Arch Linux foi desenvolvido com foco em simplicidade, elegância e código minimalista. Segue o modelo "rolling release", onde atualizações são contínuas em vez de versões discretas.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>Características</h3>
+                        <p>Sistema base minimalista, pacman como gerenciador de pacotes, documentação excelente (Arch Wiki), modelo rolling release e filosofia "faça você mesmo" que permite total controle sobre o sistema.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Público-Alvo</h3>
+                        <p>Usuários avançados, entusiastas que desejam entender profundamente como o Linux funciona e pessoas que valorizam controle total sobre seu sistema. Não é recomendado para iniciantes devido à sua curva de aprendizado íngreme.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Como Escolher uma Distribuição</h2>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3>Nível de Experiência</h3>
+                        <p>Iniciantes devem considerar distribuições amigáveis como Ubuntu, Linux Mint ou Pop!_OS. Usuários avançados podem preferir Arch, Gentoo ou Slackware.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>Hardware</h3>
+                        <p>Para hardware antigo ou limitado, considere distribuições leves como Lubuntu, Xubuntu ou Puppy Linux. Hardware moderno pode rodar qualquer distribuição sem problemas.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h3>Finalidade</h3>
+                        <p>Para servidores, considere CentOS, Debian ou Ubuntu Server. Para desenvolvimento, Fedora ou openSUSE. Para uso doméstico, Ubuntu, Mint ou Manjaro.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3>Modelo de Lançamento</h3>
+                        <p>Prefere estabilidade? Escolha distribuições com lançamentos fixos como Debian ou Ubuntu LTS. Quer software sempre atualizado? Opte por rolling releases como Arch ou Manjaro.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section bg-alt">
+            <div class="container">
+                <h2 class="section-title">Experimente o Linux</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3>Live USB</h3>
+                        <p>A maioria das distribuições Linux permite criar um "Live USB" que você pode inicializar sem instalar no computador. É uma ótima maneira de experimentar o Linux sem comprometer seu sistema atual.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Máquina Virtual</h3>
+                        <p>Programas como VirtualBox ou VMware permitem executar o Linux dentro do seu sistema operacional atual, oferecendo um ambiente seguro para experimentação.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-hdd"></i>
+                        </div>
+                        <h3>Dual Boot</h3>
+                        <p>Instale o Linux ao lado do seu sistema operacional atual, permitindo escolher qual sistema iniciar quando ligar o computador.</p>
+                    </div>
+                </div>
+                <div class="cta-container">
+                    <a href="terminal.html" class="btn btn-primary">Experimente o Terminal</a>
+                    <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Logo Linux">
+                    <h3>Linux</h3>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="index.html#sobre">Sobre</a></li>
+                        <li><a href="index.html#historia">História</a></li>
+                        <li><a href="index.html#vantagens">Vantagens</a></li>
+                        <li><a href="index.html#comandos">Comandos</a></li>
+                        <li><a href="terminal.html">Terminal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-resources">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="https://www.kernel.org/" target="_blank">Kernel.org</a></li>
+                        <li><a href="https://www.linuxfoundation.org/" target="_blank">Linux Foundation</a></li>
+                        <li><a href="https://distrowatch.com/" target="_blank">DistroWatch</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Projeto Linux. Todos os direitos reservados.</p>
+                <p>Desenvolvido para trabalho acadêmico.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+programas em C tem código compilado, isso significa que a execução do programa ocorre por meio de um arquivo 
+executável, portanto, para executar códigos em C, digite:
+
+ gcc NomeDoArquivo.c -o NomeDoExecutavel
+
+e então digite:
+
+ ./NomeDoExecutavel
+
+
+Em windows o procedimento seria assim:
+
+ gcc NomeDoArquivo.c -o NomeDoExecutavel.exe
+
+ NomeDoExecutavel.exe

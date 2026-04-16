@@ -1,0 +1,34 @@
+Sou gerente de uma Loja de DVDs e preciso criar um sistema para Gerenciar os DVDs que tenho na loja.
+Preciso organizar os Pedidos dos DVDs vendidos.
+
+O sistema é necessário ter informações do DVD:
+
+    Nome do DVD
+    Título
+    Valor
+    Quantidade em estoque
+    Gravadora
+    Nome do Artista
+    Categoria
+
+Os dados do Cliente que o sistema precisa armazenar são:
+
+    Nome do Cliente
+    Endereço do Cliente
+    Renda do Cliente
+    Sexo do cliente
+    Estado civil
+    Nome do cônjuge
+    Renda do cônjuge
+    Sexo do cônjuge
+
+Dados do funcionário:
+
+    Nome
+    Endereço
+    Salário
+    Sexo
+    Dependente:
+        Nome
+        Sexo
+        Tipo de dependente

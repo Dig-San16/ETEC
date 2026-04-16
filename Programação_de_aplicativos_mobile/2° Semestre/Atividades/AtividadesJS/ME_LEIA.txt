@@ -1,0 +1,6 @@
+Arquivos em javascript são executados por meio do NODE.js, instale esse software e digite 
+no terminal o seguinte:
+
+node NomeDoArquivo.js
+
+isso permite a execução do código

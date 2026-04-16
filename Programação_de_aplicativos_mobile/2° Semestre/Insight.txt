@@ -1,0 +1,4 @@
+No primeiro semestre de programação de aplicativos mobile, Aprendemos sobre a linguagem Javascript
+e suas aplicações para a criar dinâmicas nos sites
+
+Aprendemos um pouco sobre React Native

@@ -1,0 +1,4 @@
+No segundo semestre de Programação Web, aprendemos sobre a Linguagem PHP e suas principais funções
+para criar a arquitetura entre cliente e servidor.
+
+Integramos SQL com PHP para a criação de sites dinâmicos 

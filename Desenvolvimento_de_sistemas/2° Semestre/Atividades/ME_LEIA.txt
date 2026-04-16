@@ -1,0 +1,9 @@
+Para poder programar em C#, certifique-se que o aplicativo .NET SDK esteja instalado, ele permite que 
+você utilize dos demais recursos do C#. Depois de instala-lo, entre em uma pasta e 
+execute no terminal (caso for no vscode) o seguinte:
+
+dotnet new console
+
+caso tiver um código pronto, execute:
+
+dotnet run
