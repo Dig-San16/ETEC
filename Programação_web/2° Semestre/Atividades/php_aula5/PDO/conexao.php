@@ -4,7 +4,7 @@
 $host = "localhost";
 $dbname = "escola";
 $user = "root";
-$pass = "sudo";
+$pass = "sua_senha";
 
 //A qualquer hora essa linha pode dar um erro, ent usamos try-catch
 try {
