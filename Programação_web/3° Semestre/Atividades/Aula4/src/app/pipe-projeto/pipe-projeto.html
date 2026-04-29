@@ -1,0 +1,58 @@
+<p>nome: {{nome | uppercase}}</p>
+<p>cursoA: {{curso1 | uppercase}}</p>
+<p>cursoB: {{curso2 | uppercase}}</p>
+<p>profissão atual: {{profissao | uppercase}}</p>
+<p>dados: {{dados_pessoais | json}}</p>
+
+
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>nota1</th>
+            <th>nota2</th>
+            <th>nota3</th>
+            <th>nota4</th>
+            <th>media</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let aluno of alunos">
+            <td>{{aluno.nome}}</td>
+            <td>{{aluno.nota1}}</td>
+            <td>{{aluno.nota2}}</td>
+            <td>{{aluno.nota3}}</td>
+            <td>{{aluno.nota4}}</td>
+            <td>{{aluno | media}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Janeiro</th>
+            <th>Fevereiro</th>
+            <th>Março</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let venda of vendas">
+            <td>{{venda.nome}}</td>
+            <td>{{venda.janeiro}}</td>
+            <td>{{venda.fevereiro}}</td>
+            <td>{{venda.marco}}</td>
+            <td>{{venda | media}}</td>
+        </tr>
+    </tbody>
+</table>

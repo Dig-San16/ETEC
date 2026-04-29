@@ -1,0 +1,12 @@
+p {
+    color: rgb(16, 97, 167);
+    text-align: center;
+    padding: 10px; 
+    max-width: 800px; 
+    margin: 20px auto; 
+}
+
+table {
+    width: 30%;
+    margin: 20px auto;
+}
